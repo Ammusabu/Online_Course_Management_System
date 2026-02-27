@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Login | Learnova{% endblock %}
+
+{% block content %}
+
+<div class="auth-container">
+
+    <!-- LEFT SIDE (Brand Panel) -->
+    <div class="auth-left">
+        <div class="auth-brand">
+            <h1>Learnova</h1>
+            <p>Master skills. Build career. Learn smarter.</p>
+
+            <ul>
+                <li>✔ Structured courses</li>
+                <li>✔ Track your progress</li>
+                <li>✔ Earn certificates</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- RIGHT SIDE (Form Panel) -->
+    <div class="auth-right">
+
+        <div class="auth-box">
+            <h2>Welcome Back 👋</h2>
+            <p class="auth-sub">Login to continue learning</p>
+
+            <form method="POST">
+                {% csrf_token %}
+
+                <label>Username</label>
+                <input type="text" name="username" required>
+
+                <label>Password</label>
+                <input type="password" name="password" required>
+
+                <button class="auth-btn">Login</button>
+            </form>
+
+            <p class="auth-footer">
+                New here?
+                <a href="{% url 'register' %}">Create an account</a>
+            </p>
+
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

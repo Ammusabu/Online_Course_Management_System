@@ -1,0 +1,553 @@
+/* hero section */
+
+
+.hero-section{
+    padding:60px 0 30px 0;
+}
+
+.hero-section h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.hero-section p{
+    font-size:18px;
+    color:var(--muted);
+    margin-bottom:20px;
+}
+.hero-section{
+    background:linear-gradient(135deg,#eef2ff,#e0e7ff);
+    border-radius:18px;
+    padding:50px 40px;
+    margin-bottom:30px;
+}
+
+.hero-section .btn{
+    margin-top:10px;
+}
+:root{
+    --primary:#0f766e;
+    --primary-dark:#0d5f5a;
+    --accent:#f59e0b;
+    --text:#0f172a;
+    --muted:#64748b;
+    --bg:#f8fafc;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
+    background:#f3f4f6;
+    min-height:100vh;
+    color:#111827;
+}
+
+/* -layout*/
+
+.page-wrapper{
+    padding-top:90px;
+    padding-bottom:60px;
+}
+
+.main-container{
+    width:1100px;
+    max-width:92%;
+    margin:auto;
+}
+
+/* navbar*/
+
+.navbar{
+    position:sticky;
+    top:0;
+    background:white;
+    padding:16px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #e5e7eb;
+    box-shadow:0 2px 6px rgba(0,0,0,0.05);
+}
+.navbar a{
+    color:var(--text);
+    text-decoration:none;
+    margin-left:22px;
+    font-weight:500;
+}
+.navbar a:hover{
+    color:var(--primary);
+}
+.logo a{
+    font-size:20px;
+    font-weight:700;
+    color:var(--primary);
+}
+
+/* ---------- TYPOGRAPHY ---------- */
+
+/* ---------- TYPOGRAPHY ---------- */
+
+h1{
+    font-size:32px;
+    margin-bottom:12px;
+    color:var(--text);
+}
+
+h2{
+    margin-top:30px;
+    margin-bottom:14px;
+    color:var(--text);
+}
+
+h3{
+    margin-top:18px;
+    margin-bottom:10px;
+    color:var(--text);
+}
+
+p{
+    margin-bottom:10px;
+    color:var(--muted);
+}
+
+/* ---------- CARD ---------- */
+
+.card{
+    background:white;
+    border-radius:16px;
+    padding:22px;
+    margin-bottom:22px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.8);
+}
+
+/* ---------- COURSE CARD ---------- */
+
+.course-card{
+    background:white;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    transition:all .25s ease;
+    text-decoration:none;
+    color:var(--text);
+    display:flex;
+    flex-direction:column;
+    padding:18px;
+    height:220px;
+    position:relative;
+}
+
+.course-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 14px 30px rgba(0,0,0,0.15);
+}
+
+.course-card h2{
+    font-size:18px;
+    margin-bottom:8px;
+}
+
+.course-card p{
+    font-size:14px;
+    color:var(--muted);
+    flex-grow:1;
+}
+
+.course-card strong{
+    font-size:12px;
+    letter-spacing:.5px;
+    color:var(--primary);
+    font-weight:700;
+}
+
+/* ---------- GRID ---------- */
+
+.course-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+    gap:28px;
+    margin-top:35px;
+}
+
+/* ---------- BUTTON ---------- */
+
+.btn{
+    display:inline-block;
+    padding:11px 18px;
+    border-radius:10px;
+    background:var(--primary);
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    border:none;
+    cursor:pointer;
+    transition:all .2s ease;
+}
+
+.btn:hover{
+    background:var(--primary-dark);
+    transform:translateY(-1px);
+}
+
+/* ---------- PROGRESS BADGE ---------- */
+
+.progress{
+    margin-top:10px;
+    font-weight:600;
+    color:#22c55e;
+}
+
+/* ---------- LESSON LIST ---------- */
+
+.lesson{
+    background:white;
+    padding:14px 18px;
+    border-radius:12px;
+    margin-bottom:12px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* ---------- REVIEW ---------- */
+
+.review-card{
+    background:white;
+    border-radius:14px;
+    padding:16px;
+    margin-bottom:14px;
+}
+
+.review-user{
+    font-weight:700;
+    margin-bottom:6px;
+}
+
+.review-comment{
+    color:#374151;
+}
+
+/* ---------- FORM ---------- */
+
+input, textarea, select{
+    width:100%;
+    padding:10px;
+    border-radius:8px;
+    border:1px solid #d1d5db;
+    margin-top:8px;
+    margin-bottom:14px;
+}
+
+textarea{
+    resize:none;
+}
+/* ---------- PROGRESS BAR ---------- */
+
+.progress-wrapper{
+    margin-top:12px;
+}
+
+.progress-bar-bg{
+    width:100%;
+    height:10px;
+    background:#e5e7eb;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress-bar-fill{
+    height:100%;
+    background:linear-gradient(90deg,#22c55e,#16a34a);
+    width:0%;
+    transition:width 0.6s ease;
+}
+
+.progress-text{
+    margin-top:6px;
+    font-weight:600;
+    color:#16a34a;
+}
+/* ---------- CARD TEXT FIX ---------- */
+
+.card,
+.course-card,
+.lesson,
+.review-card{
+    color:#111827;
+}
+
+.card p,
+.course-card p,
+.lesson p,
+.review-card p{
+    color:#374151;
+}
+
+.card h1,
+.card h2,
+.card h3,
+.course-card h2{
+    color:#111827;
+}
+/* ---------- LESSON STYLE ---------- */
+
+.lesson{
+    background:white;
+    padding:16px 18px;
+    border-radius:14px;
+    margin-bottom:14px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+.logo a{
+    font-size:20px;
+    font-weight:700;
+    letter-spacing:0.5px;
+}
+.course-card{
+    border:1px solid #e2e8f0;
+}
+
+.course-card:hover{
+    border-color:var(--primary);
+}
+/* ---------- LESSON VIDEO GRID ---------- */
+
+.section-title{
+    margin-top:40px;
+    margin-bottom:20px;
+    font-size:28px;
+}
+
+/* grid layout */
+.lesson-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(340px, 1fr));
+    gap:28px;
+}
+
+/* lesson card */
+.lesson-card{
+    background:white;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.12);
+    transition:0.25s;
+}
+
+.lesson-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 16px 40px rgba(0,0,0,0.18);
+}
+
+/* video */
+.lesson-video{
+    width:100%;
+    height:210px;
+    background:#000;
+}
+
+.lesson-video iframe{
+    width:100%;
+    height:100%;
+}
+
+/* info */
+.lesson-info{
+    padding:16px;
+}
+
+.lesson-info h3{
+    font-size:16px;
+    margin-bottom:6px;
+}
+
+.lesson-info p{
+    font-size:14px;
+    color:#6b7280;
+}
+
+/* completed badge */
+.completed-badge{
+    display:inline-block;
+    margin-top:10px;
+    padding:6px 10px;
+    background:#dcfce7;
+    color:#166534;
+    border-radius:8px;
+    font-size:13px;
+    font-weight:600;
+}
+.no-video{
+    height:210px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#e5e7eb;
+    color:#64748b;
+    font-weight:600;
+}
+
+.lesson-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
+    gap:28px;
+    margin-top:25px;
+    align-items:stretch;
+}
+
+.lesson-card{
+    display:flex;
+    flex-direction:column;
+    height:100%;
+}
+
+.lesson-video{
+    width:100%;
+    aspect-ratio:16/9;
+    background:black;
+    overflow:hidden;
+    border-top-left-radius:16px;
+    border-top-right-radius:16px;
+}
+
+.lesson-video iframe{
+    width:100%;
+    height:100%;
+    border:0;
+}
+
+/* ---------- AUTH PAGES ---------- */
+
+.auth-container{
+    display:flex;
+    min-height:calc(100vh - 80px);
+    margin-top:20px;
+    border-radius:18px;
+    overflow:hidden;
+    background:white;
+    box-shadow:0 20px 60px rgba(0,0,0,0.15);
+}
+
+/* LEFT PANEL */
+.auth-left{
+    flex:1;
+    background:linear-gradient(135deg,#0f766e,#115e59);
+    color:white;
+    padding:60px 50px;
+    display:flex;
+    align-items:center;
+}
+
+.auth-brand h1{
+    font-size:42px;
+    margin-bottom:10px;
+    color:white;
+}
+
+.auth-brand p{
+    font-size:18px;
+    margin-bottom:25px;
+    color:#ccfbf1;
+}
+
+.auth-brand ul{
+    list-style:none;
+    line-height:2;
+    font-size:16px;
+}
+
+/* RIGHT PANEL */
+.auth-right{
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#f8fafc;
+}
+
+.auth-box{
+    width:340px;
+}
+
+.auth-box h2{
+    margin-bottom:6px;
+}
+
+.auth-sub{
+    color:#64748b;
+    margin-bottom:25px;
+}
+
+/* INPUTS */
+.auth-box input{
+    width:100%;
+    padding:12px;
+    border-radius:10px;
+    border:1px solid #d1d5db;
+    margin-top:6px;
+    margin-bottom:18px;
+    font-size:15px;
+}
+
+.auth-box input:focus{
+    outline:none;
+    border-color:#0f766e;
+    box-shadow:0 0 0 3px rgba(15,118,110,0.15);
+}
+
+/* BUTTON */
+.auth-btn{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#0f766e;
+    color:white;
+    font-weight:600;
+    font-size:16px;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.auth-btn:hover{
+    background:#0d5f5a;
+}
+
+/* FOOTER */
+.auth-footer{
+    margin-top:18px;
+    font-size:14px;
+    color:#64748b;
+    text-align:center;
+}
+
+.auth-footer a{
+    color:#0f766e;
+    font-weight:600;
+    text-decoration:none;
+}
+/* register inputs */
+
+.auth-input{
+    width:100%;
+    padding:12px;
+    border-radius:10px;
+    border:1px solid #d1d5db;
+    margin-top:6px;
+    margin-bottom:18px;
+    font-size:15px;
+}
+
+.auth-input:focus{
+    outline:none;
+    border-color:#0f766e;
+    box-shadow:0 0 0 3px rgba(15,118,110,0.15);
+}

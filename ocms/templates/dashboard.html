@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+
+<h1>My Dashboard</h1>
+
+{% if courses_data %}
+    {% for item in courses_data %}
+        <div class="card">
+
+            <h2>{{ item.course.title }}</h2>
+
+            <div class="progress-wrapper">
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" style="width: {{ item.progress }}%;"></div>
+                </div>
+
+                <div class="progress-text">
+                    {{ item.progress }}% completed
+                </div>
+            </div>
+
+            <a href="{% url 'course_detail' item.course.id %}" class="btn">
+                Continue Learning
+            </a>
+
+        </div>
+    {% endfor %}
+{% else %}
+    <div class="card">
+        <h3>You are not enrolled in any courses yet.</h3>
+        <a href="{% url 'home' %}" class="btn">Browse Courses</a>
+    </div>
+{% endif %}
+
+{% endblock %}

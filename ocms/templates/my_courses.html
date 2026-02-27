@@ -1,0 +1,36 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Courses</title>
+</head>
+<body>
+
+<h1>My Courses Dashboard</h1>
+
+{% for item in courses_data %}
+    <div style="border:1px solid black; padding:15px; margin:15px;">
+        <h2>{{ item.course.title }}</h2>
+
+        <p>Progress: <b>{{ item.progress }}%</b></p>
+
+        <a href="/course/{{item.course.id}}/">
+            <button>Open Course</button>
+        </a>
+
+        {% if item.progress == 100 %}
+            <a href="/api/certificate/{{item.course.id}}/">
+                <button>Download Certificate</button>
+            </a>
+        {% endif %}
+    </div>
+{% empty %}
+    <p>You are not enrolled in any courses.</p>
+{% endfor %}
+
+<br>
+<a href="/">⬅ Back to Home</a>
+
+</body>
+</html>
