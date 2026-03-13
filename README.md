@@ -1,5 +1,5 @@
 # Online Course Management System (OCMS)
-<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/d1d520c2-eaea-4f6c-a482-72f29edab2eb" />
+<img width="2880" height="1728" alt="image" src="https://github.com/user-attachments/assets/91341d8d-f2e2-4793-9c92-9a397847fccf" />
 
 ## Project Overview
 
